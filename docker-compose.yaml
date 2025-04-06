@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  crypto-lstm-dashboard:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
